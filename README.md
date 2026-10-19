@@ -1,4 +1,4 @@
-# Omnia
+# Omnia: Efficient RAG Serving through Speculative Scheduling
 
 Omnia reduces RAG serving latency through **coarse-to-fine reranking, chunk pruning and progressive prefilling**. This repository packages the core experimental pipeline with the original **lightweight BARS heuristic**, HTTP adapters for vLLM and SGLang, a serial baseline, and a small corpus sample.
 
