@@ -1,0 +1,39 @@
+{
+  "server": {"host": "127.0.0.1", "port": 9876},
+  "timeout_seconds": 600,
+  "dataset_path": null,
+  "coarse_reranker": {
+    "backend": "vllm",
+    "base_url": "http://127.0.0.1:9877/v1",
+    "model": "Qwen/Qwen3-Reranker-0.6B",
+    "max_concurrency": 128
+  },
+  "fine_reranker": {
+    "backend": "vllm",
+    "base_url": "http://127.0.0.1:9878/v1",
+    "model": "Qwen/Qwen3-Reranker-8B",
+    "max_concurrency": 64
+  },
+  "generator": {
+    "base_url": "http://127.0.0.1:9879/v1",
+    "model": "Qwen/Qwen3-32B",
+    "extra_body": {"chat_template_kwargs": {"enable_thinking": false}}
+  },
+  "bars": {
+    "enabled": true,
+    "min_group_size": 2,
+    "alpha": 0.5,
+    "beta": 1.0,
+    "metrics_timeout_seconds": 1.0,
+    "metrics_url": "http://127.0.0.1:9879/metrics"
+  },
+  "pipeline": {
+    "group_size": 2,
+    "initial_fraction": 0.2,
+    "stability_fraction": 0.1,
+    "min_stable_candidates": 2,
+    "enable_pruning": true,
+    "enable_prefill": true,
+    "max_tokens": 512
+  }
+}

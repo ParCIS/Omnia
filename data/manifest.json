@@ -1,0 +1,18 @@
+{
+  "source_file": "OMNIA/dataset/frames/frames_chunks_512.json",
+  "source_sha256": "af4c8247651b1b27c79335791961f1f7818eac97f355c0505e621f39c16385dc",
+  "source_bytes": 25406928,
+  "selection": "First two non-empty records in original JSON order whose individual compact JSON serialization is at most 65536 UTF-8 bytes; complete records, no chunk truncation.",
+  "sample_file": "frames_sample.json",
+  "sample_sha256": "4bff32137905e17df771b21eeedef8a4fc0b87e1fc44978ce6efa98fec16f370",
+  "sample_bytes": 16548,
+  "query_count": 2,
+  "chunk_counts": {
+    "An Australian artist, born the same year as artist Janet Cumbrae Stewart and fellow member of the Melbourne Society of Women Painters and Sculptors, had her painting featured on the cover of Women's World Magazine in 1923. What is the name of the painting?": 4,
+    "As of August 1 2024, what is the most recently described genus of Colosteidae?": 6
+  },
+  "benchmark": "google/frames-benchmark",
+  "collection": "Benchmark Wikipedia URLs fetched using Jina Reader; Markdown stripped using Mistune, according to the original collection script.",
+  "chunking": "The source is the 512-token chunk artifact. The original chunking script uses the Qwen3-Reranker-4B tokenizer, non-overlapping token windows and a greater-than-50-character filter.",
+  "purpose": "Small service smoke-test sample, not an evaluation split."
+}
